@@ -14,3 +14,4 @@ Application also has an "About button" in the top-right corner:
 
 <img src="https://i.imgur.com/EG7D5Bs.png" alt="drawing" width="250"/>
 
+Download [APK](https://github.com/seytkalievm/ChuckNorris_Jokes.x/releases/download/v1.0.0/Chuck.Norris.Jokes.apk)
