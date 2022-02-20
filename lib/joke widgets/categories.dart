@@ -1,9 +1,7 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_hw/joke.dart';
-import 'package:flutter_hw/networking.dart';
-import 'package:http/http.dart';
-import 'package:flutter_hw/networking.dart';
+import 'package:flutter_hw/joke%20widgets/joke.dart';
+import 'package:flutter_hw/networking/networking.dart';
+
 
 class Categories extends StatelessWidget{
   const Categories({Key? key}) : super(key: key);
@@ -18,7 +16,7 @@ class Categories extends StatelessWidget{
           if(data == null){
             return const CircularProgressIndicator();
           }else{
-            var categories = [];
+            var categories = ['random'];
             for (var category in data){
               categories.add(category);
             }
@@ -44,7 +42,6 @@ class Categories extends StatelessWidget{
 
 
 
-
 class Category extends StatelessWidget{
   const Category(this.category, {Key? key}): super(key: key);
 
@@ -67,7 +64,7 @@ class Category extends StatelessWidget{
         ),
       ),
       child: Text(
-        category,
+        "${category[0].toUpperCase()}${category.substring(1)}",
         style: const TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.bold,

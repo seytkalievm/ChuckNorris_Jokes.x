@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hw/about.dart';
-import 'package:flutter_hw/category.dart';
+import 'package:flutter_hw/about/about.dart';
+import 'package:flutter_hw/joke%20widgets/categories.dart';
 
 
 void main() {
@@ -24,11 +24,17 @@ class MyApp extends StatelessWidget {
               title: const Text('Chuck Norris Jokes'),
               actions: [
                 IconButton(
-                    onPressed: (){
-                      showAboutSheet(context);
-                    },
-                    icon: const Icon(CupertinoIcons.exclamationmark_circle))
-                ],
+                    onPressed: () => showAboutDialog(
+                      context: context,
+                      applicationName: 'Chuck Norris Jokes',
+                      applicationVersion: '1.0.0',
+                      children: [
+                        const AboutInfo(),
+                      ]
+                    ),
+                    icon: const Icon(CupertinoIcons.exclamationmark_circle)
+                )
+              ],
             ),
             body: const Center(
                 child: Categories(),

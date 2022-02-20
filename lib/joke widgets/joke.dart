@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hw/networking.dart';
+import 'package:flutter_hw/networking/networking.dart';
 
 class JokeDialog extends AlertDialog{
   const JokeDialog(this.category, {Key? key}) : super(key: key);
@@ -8,7 +8,7 @@ class JokeDialog extends AlertDialog{
   @override
   AlertDialog build(BuildContext context){
     return AlertDialog(
-      title: Text('Random $category joke'),
+      title: Text('${category[0].toUpperCase()}${category.substring(1)} joke'),
       content: JokeText(category),
       actions: <Widget>[
         TextButton(
@@ -19,7 +19,7 @@ class JokeDialog extends AlertDialog{
                   builder: (BuildContext context) => JokeDialog(category)
               );
             }, 
-            child: const Text('Loln\'t')),
+            child: const Text('Next')),
 
         TextButton(
           onPressed: () => Navigator.pop(context),
