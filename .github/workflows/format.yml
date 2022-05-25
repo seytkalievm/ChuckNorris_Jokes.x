@@ -19,4 +19,4 @@ jobs:
       - name: flutter pub get
         run: flutter pub get
       - name: flutter formatter
-        run: flutter format --set-exit-if-changed .
+        run: flutter format -n --set-exit-if-changed -- --line-length 140 .
