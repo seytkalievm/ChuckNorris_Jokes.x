@@ -3,15 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hw/about/about.dart';
 import 'package:flutter_hw/joke%20widgets/categories.dart';
 
-
 void main() {
-  runApp(const MaterialApp(
-    home: MyApp(),
-    debugShowCheckedModeBanner: false
-    ),
+  runApp(
+    const MaterialApp(home: MyApp(), debugShowCheckedModeBanner: false),
   );
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -43,4 +39,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

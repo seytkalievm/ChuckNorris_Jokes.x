@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hw/networking/networking.dart';
 
-class JokeDialog extends AlertDialog{
+class JokeDialog extends AlertDialog {
   const JokeDialog(this.category, {Key? key}) : super(key: key);
   final String category;
 
   @override
-  AlertDialog build(BuildContext context){
+  AlertDialog build(BuildContext context) {
     return AlertDialog(
       title: Text('${category[0].toUpperCase()}${category.substring(1)} joke'),
       content: JokeText(category),
@@ -30,8 +30,7 @@ class JokeDialog extends AlertDialog{
   }
 }
 
-
-class JokeText extends StatelessWidget{
+class JokeText extends StatelessWidget {
   const JokeText(this.category, {Key? key}) : super(key: key);
   final String category;
 

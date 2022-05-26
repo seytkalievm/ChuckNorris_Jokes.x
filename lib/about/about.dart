@@ -2,13 +2,14 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
-const String _aboutApp = '''Simple flutter application that displays Chuck Norris Jokes on a given topic.\n''';
-const String _author = '''Seytkaliev Makshe, 3rd year bachelor student at Innopolis University.\n''';
+const String _aboutApp =
+    '''Simple flutter application that displays Chuck Norris Jokes on a given topic.\n''';
+const String _author =
+    '''Seytkaliev Makshe, 3rd year bachelor student at Innopolis University.\n''';
 const String _telegramLink = 'https://t.me/seytkalievm';
 const String _githubLink = 'https://github.com/seytkalievm';
 
-class AboutInfo extends StatelessWidget{
+class AboutInfo extends StatelessWidget {
   const AboutInfo({Key? key}) : super(key: key);
 
   @override
@@ -38,14 +39,15 @@ class AboutInfo extends StatelessWidget{
             ),
           ),
           TextSpan(
-            text: 'Telegram\n',
-            style: const TextStyle(
-              color: Colors.blue,
-              fontSize: 18,
-            ),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () {launch(_telegramLink);}
-          ),
+              text: 'Telegram\n',
+              style: const TextStyle(
+                color: Colors.blue,
+                fontSize: 18,
+              ),
+              recognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  launch(_telegramLink);
+                }),
           TextSpan(
             text: 'Github',
             style: const TextStyle(
@@ -53,7 +55,9 @@ class AboutInfo extends StatelessWidget{
               fontSize: 18,
             ),
             recognizer: TapGestureRecognizer()
-              ..onTap = () {launch(_githubLink);},
+              ..onTap = () {
+                launch(_githubLink);
+              },
           ),
         ],
       ),

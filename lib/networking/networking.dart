@@ -5,16 +5,16 @@ const _categoriesUrl = 'https://api.chucknorris.io/jokes/categories';
 const _categoryJokeUrl = 'https://api.chucknorris.io/jokes/random?category=';
 const _randomJokeUrl = 'https://api.chucknorris.io/jokes/random';
 
-Future <List> fetchCategories() async{
+Future<List> fetchCategories() async {
   final response = await get(Uri.parse(_categoriesUrl));
   return jsonDecode(response.body);
 }
 
-Future <Map<String, Object?>> fetchJoke(String category) async{
+Future<Map<String, Object?>> fetchJoke(String category) async {
   String url;
-  if (category == 'random'){
+  if (category == 'random') {
     url = _randomJokeUrl;
-  }else{
+  } else {
     url = _categoryJokeUrl + category;
   }
   final response = await get(Uri.parse(url));

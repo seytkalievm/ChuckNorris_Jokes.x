@@ -2,33 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hw/joke%20widgets/joke.dart';
 import 'package:flutter_hw/networking/networking.dart';
 
-
-class Categories extends StatelessWidget{
+class Categories extends StatelessWidget {
   const Categories({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder <List>(
+      body: FutureBuilder<List>(
         future: fetchCategories(),
-        builder: (context, snapshot){
+        builder: (context, snapshot) {
           final data = snapshot.data;
-          if(data == null){
+          if (data == null) {
             return const CircularProgressIndicator();
-          }else{
+          } else {
             var categories = ['random'];
-            for (var category in data){
+            for (var category in data) {
               categories.add(category);
             }
             return ListView.builder(
               physics: const BouncingScrollPhysics(),
               itemCount: categories.length,
-              itemBuilder: (context, i){
+              itemBuilder: (context, i) {
                 return InkWell(
                   child: Category(categories[i]),
                   onTap: () => showDialog(
                     context: context,
-                    builder: (BuildContext context) => JokeDialog(categories[i]),
+                    builder: (BuildContext context) =>
+                        JokeDialog(categories[i]),
                   ),
                 );
               },
@@ -40,10 +40,8 @@ class Categories extends StatelessWidget{
   }
 }
 
-
-
-class Category extends StatelessWidget{
-  const Category(this.category, {Key? key}): super(key: key);
+class Category extends StatelessWidget {
+  const Category(this.category, {Key? key}) : super(key: key);
 
   final String category;
 
