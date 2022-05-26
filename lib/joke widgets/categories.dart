@@ -60,7 +60,7 @@ class Category extends StatelessWidget{
           side: const BorderSide(
             width: 5,
             color: Colors.orangeAccent,
-          )
+          ),
         ),
       ),
       child: Text(

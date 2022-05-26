@@ -12,15 +12,15 @@ class JokeDialog extends AlertDialog{
       content: JokeText(category),
       actions: <Widget>[
         TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-              showDialog(
-                  context: context,
-                  builder: (BuildContext context) => JokeDialog(category)
-              );
-            }, 
-            child: const Text('Next')),
-
+          onPressed: () {
+            Navigator.pop(context);
+            showDialog(
+                context: context,
+                builder: (BuildContext context) => JokeDialog(category)
+            );
+            },
+          child: const Text('Next'),
+        ),
         TextButton(
           onPressed: () => Navigator.pop(context),
           child: const Text('Lol'),
@@ -38,15 +38,15 @@ class JokeText extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<Map<String, Object?>>(
-        future: fetchJoke(category),
-        builder: (context, snapshot) {
-          final data = snapshot.data;
-          if (data == null) {
-            return const Text('Wait for it...');
-          } else {
-            return Text(data['value'].toString());
+      future: fetchJoke(category),
+      builder: (context, snapshot) {
+        final data = snapshot.data;
+        if (data == null) {
+          return const Text('Wait for it...');
+        } else {
+          return Text(data['value'].toString());
         }
-      }
+      },
     );
   }
 }
