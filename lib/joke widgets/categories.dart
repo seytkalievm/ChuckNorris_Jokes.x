@@ -27,9 +27,9 @@ class Categories extends StatelessWidget{
                 return InkWell(
                   child: Category(categories[i]),
                   onTap: () => showDialog(
-                      context: context,
-                      builder: (BuildContext context) => JokeDialog(categories[i]),
-                    ),
+                    context: context,
+                    builder: (BuildContext context) => JokeDialog(categories[i]),
+                  ),
                 );
               },
             );

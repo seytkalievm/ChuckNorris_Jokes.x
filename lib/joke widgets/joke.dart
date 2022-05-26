@@ -15,10 +15,10 @@ class JokeDialog extends AlertDialog{
           onPressed: () {
             Navigator.pop(context);
             showDialog(
-                context: context,
-                builder: (BuildContext context) => JokeDialog(category)
+              context: context,
+              builder: (BuildContext context) => JokeDialog(category),
             );
-            },
+          },
           child: const Text('Next'),
         ),
         TextButton(

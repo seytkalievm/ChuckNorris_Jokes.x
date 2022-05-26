@@ -24,15 +24,15 @@ class MyApp extends StatelessWidget {
           title: const Text('Chuck Norris Jokes'),
           actions: [
             IconButton(
-                onPressed: () => showAboutDialog(
-                    context: context,
-                    applicationName: 'Chuck Norris Jokes',
-                    applicationVersion: '1.0.0',
-                    children: [
-                      const AboutInfo(),
-                    ]
-                ),
-                icon: const Icon(CupertinoIcons.exclamationmark_circle)
+              onPressed: () => showAboutDialog(
+                context: context,
+                applicationName: 'Chuck Norris Jokes',
+                applicationVersion: '1.0.0',
+                children: [
+                  const AboutInfo(),
+                ],
+              ),
+              icon: const Icon(CupertinoIcons.exclamationmark_circle),
             ),
           ],
         ),

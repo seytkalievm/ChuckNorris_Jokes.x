@@ -47,15 +47,15 @@ class AboutInfo extends StatelessWidget{
               ..onTap = () {launch(_telegramLink);}
           ),
           TextSpan(
-              text: 'Github',
-              style: const TextStyle(
-                color: Colors.blue,
-                fontSize: 18,
-              ),
-              recognizer: TapGestureRecognizer()
-                ..onTap = () {launch(_githubLink);}
-          )
-        ]
+            text: 'Github',
+            style: const TextStyle(
+              color: Colors.blue,
+              fontSize: 18,
+            ),
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {launch(_githubLink);},
+          ),
+        ],
       ),
     );
   }
